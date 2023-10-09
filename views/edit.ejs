@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit username</title>
+</head>
+<body>
+    <h2>you are about to edit the username of user:<%= user.email %></h2>
+<!-- we can only send get/post req inside form 
+but to edit our resource we need to send patch req to do that 
+we use methodoverride -->
+<form method="post" action="/user/<%=user.id%>?_method=PATCH">
+    <textarea name="username" id="" cols="30" rows="10"><%= user.username %></textarea>
+    <input type="password" name="password" placeholder="enter password">
+    <button>edit</button>
+</form>
+
+
+</body>
+</html>
