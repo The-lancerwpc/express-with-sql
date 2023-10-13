@@ -12,6 +12,7 @@ aap.use(methodOverride("_method"));
 aap.use(express.urlencoded({extended:true}))
 
 //connection object
+//ssid
 const connection=mysql.createConnection({
     host:'localhost',
     user:'root',
